@@ -4,6 +4,8 @@
 Goal: <what this release lets users do, in one or two sentences>
 Out of scope for this milestone:
 - <capabilities deliberately left for later>
+Specialist kinds (optional; only if this milestone needs more than sequential execute — assign owners in the phase SPEC, not here):
+- <judge / tester / researcher / …>
 
 ## Phases
 One phase = one bounded goal that can be discussed, planned, executed, and verified in one pass.

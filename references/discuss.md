@@ -1,6 +1,6 @@
 # Discuss: lock decisions before planning
 
-The roadmap says what a phase delivers. Discuss captures how, in the places where the user's preference would change the result. Skipping it means the planner guesses, and a plausible wrong guess becomes hours of autonomous work in the wrong direction.
+The roadmap says what a phase delivers. Discuss captures how, in the places where the user's preference would change the result. Skipping it means the planner guesses, and a plausible wrong guess becomes hours of autonomous work in the wrong direction. Specialist assignment (Owner / Input / Output / Escalate) is a Plan concern — see SKILL.md **Orchestrate a goal** — not something to interview unless a gray area is *who judges what*.
 
 Output: the phase's `CONTEXT.md`. Planning, execution, and verification all treat its decisions as binding.
 

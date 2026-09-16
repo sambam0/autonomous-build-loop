@@ -1,4 +1,5 @@
-Markers the harness reads: `- [ ]` open · `- [x]` done · `- [!]` blocked
+Markers the harness reads: `- [ ]` open (Queued) · `- [x]` done · `- [!]` blocked (Blocked)
+Active work is STATE.md Next action — do not keep a second in-flight board.
 
 ## Tasks
 - [ ] T1 <short title>

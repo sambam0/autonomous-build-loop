@@ -13,13 +13,13 @@ If the work is a few known lines, use the skill’s **Direct** track in whatever
 
 ## Board ownership (one-liner)
 
-**Orchestrator defers coding phases to `.loop/`** (STATE, SPEC, PROGRESS, VERIFICATION). `/home/box/orchestrator/inflight.md` mirrors crew status only — it is not a second product board. Use `orchestrate-a-goal` to assign specialists; once a coding goal is in execute/verify, **`.loop/STATE.md` is source of Next action** (see `STATE-INFLIGHT.md`).
+**Orchestrator defers coding phases to `.loop/`** (STATE, SPEC, PROGRESS, VERIFICATION). `/home/box/orchestrator/inflight.md` mirrors crew status only — it is not a second product board. Use this skill's **Orchestrate a goal** path (`SKILL.md` + `references/orchestrate.md`) to assign specialists; once a coding goal is in execute/verify, **`.loop/STATE.md` is source of Next action** (see `STATE-INFLIGHT.md`). Do not keep a sibling `orchestrate-a-goal` skill — that content lives in the loop now.
 
 ## Loop owner duties (Orchestrator)
 
 1. Orient: read `.loop/STATE.md`, run `.loop/status.sh` when a read path exists.
 2. Keep discuss / UI approve / ship with the human; do not skip them in chat.
-3. Dispatch specialists with briefs from `briefs/` that point at concrete `.loop/` paths.
+3. Dispatch specialists with briefs from `briefs/` (same shape as `references/orchestrate.md`: Goal, Your slice, Context, Constraints, Done means, Report back) that point at concrete `.loop/` paths. Minimum assignees; no awareness-only pings.
 4. Update inflight from STATE after meaningful steps — never invent Next action.
 5. Escalate to the human per the map below; never push/PR from babysit.
 6. **Never treat “already talked in Orchestrator thread” as plan-check or goal-verify.** Fresh-context judges only (see ROLE_MAP).
@@ -53,10 +53,10 @@ See `BABYSIT.md` — how Orchestrator reads status/logs, exit map, inflight mirr
 
 ## Related files
 
-- `COMPOSITION.md` — prepare → executor → results → merge → gate  
-- `ROLE_MAP.md` — loop role → crew specialist → dispatch surface  
-- `STATE-INFLIGHT.md` — dual-state sync rules  
-- `MIRROR.md` — Mac SoT vs box mirror  
-- `briefs/` — copy-paste dispatch templates
-- `COMPOSITION.md` — CloudAgent/Engineer wave composition (Slice B)
+- Skill **Orchestrate a goal** — `../../SKILL.md` (section) and `../../references/orchestrate.md` (brief template, roster, board)
+- `COMPOSITION.md` — prepare → executor → results → merge → gate
+- `ROLE_MAP.md` — loop role → crew specialist → dispatch surface
+- `STATE-INFLIGHT.md` — dual-state sync rules
+- `MIRROR.md` — Mac SoT vs box mirror
+- `briefs/` — copy-paste dispatch templates (executor, plan-checker, goal-verifier)
 - `BABYSIT.md` — Orchestrator babysit playbook (Slice C; no routine yet)  

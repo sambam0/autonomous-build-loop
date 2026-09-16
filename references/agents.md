@@ -8,6 +8,7 @@ These presets were checked against Claude Code 2.1.x, Codex CLI 0.154, Gemini CL
 - Presets
 - First-run gotchas
 - Subagents and roles per agent
+- Specialist orchestration
 - Installing the skill per agent
 - Custom agents and local models
 - Cost control
@@ -71,6 +72,14 @@ There are three ways to run them in a fresh context:
 - **Inline.** When neither is possible, the prompts tell the agent to follow the role instructions itself. That's weakest for plan-checker, goal-verifier, and ui-checker, because judging work in the context that produced it defeats the purpose, so prefer `role.sh` for those.
 
 The harness runs the gate after every iteration and every wave for every agent, so the gate holds without hooks or subagents. The Claude Code Stop hook is an extra layer.
+
+## Specialist orchestration
+
+Sequential execute uses the executor role (or a wave of them). When a goal needs other specialists, follow SKILL.md **Orchestrate a goal** and `references/orchestrate.md`. Dispatch with the same three mechanisms as above (native subagent, `role.sh`, or inline). Write a self-contained brief (Goal, Your slice, Context, Constraints, Done means, Report back).
+
+Do **not** depend on Grok Bot `SendToAgent` or `/home/box/orchestrator/inflight.md` to run this skill. Those exist only under `adapters/grok-bot/`. Standalone in-flight tracking is STATE.md Next action (Active) plus PROGRESS.md checkboxes (Queued / Blocked).
+
+Plan-checker, goal-verifier, and ui-checker still judge in a fresh context. Orchestration does not replace `loop.sh`, weaken the gate, or skip those roles.
 
 ## Installing the skill per agent
 

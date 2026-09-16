@@ -1,6 +1,6 @@
 # Verify and ship
 
-A phase is done when what was built is what was planned, and what was planned is what was decided. The gate proves the code compiles and tests pass. Goal verification proves the goal was met. Human checks cover what neither can see. Only then ship.
+A phase is done when what was built is what was planned, and what was planned is what was decided. The gate proves the code compiles and tests pass. Goal verification proves the goal was met. Human checks cover what neither can see. Only then ship. Orchestrating specialists does not skip this path or count a chat "looks good" as verification.
 
 ## Contents
 - Goal verification

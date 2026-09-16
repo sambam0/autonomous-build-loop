@@ -8,6 +8,7 @@ How to cut work into phases, and how to turn a phase's decisions into a plan an 
 - Research (only when needed)
 - Must-haves: plan backwards from the goal
 - Tasks
+- Specialist ownership (when orchestrating)
 - Tracer first
 - Test first
 - Parallel-safe plans
@@ -77,6 +78,21 @@ Size each task at 20 to 60 minutes of agent work and about 8 files or fewer. Spl
 Keep human work out: credentials, design judgment, and product calls go under "For the human" in PROGRESS.md, and tasks are written to work around them (mock the external service, read the key from env).
 
 Then write the checklist into PROGRESS.md with matching IDs and titles.
+
+## Specialist ownership (when orchestrating)
+
+Most phases are sequential execute: every task's owner is the executor role, and `loop.sh` / `wave.sh` run them. When the phase (or the parent goal) needs specialists — SKILL.md **Orchestrate a goal** and `references/orchestrate.md` — add these fields on each task that is not a plain coding slice:
+
+- **Owner:** a loop role (`executor`, `plan-checker`, `goal-verifier`, `ui-checker`, `ui-researcher`, `reviewer`, `explorer`, `test-runner`, `codebase-mapper`). Crew names (Engineer, Reviewer, Tester, …) belong only in `adapters/grok-bot/ROLE_MAP.md`.
+- **Input:** what they receive (paths, prior outputs, constraints). Enough to start without the human relaying the parent thread.
+- **Output:** the artifact they return (results file, review list, VERIFICATION section, `CODEBASE.md`).
+- **Escalate:** what they must not decide — credentials, product calls, ship/push/PR, architectural Rule-4 changes.
+
+Coding tasks keep Files, Test first, and Done when, and may omit Owner (it is executor). Specialist tasks still need a verifiable Done when. Human-only work stays under "For the human".
+
+Assign the minimum set. Do not create a "FYI" task for every role. Plan-checker and goal-verifier remain mandatory loop gates in a fresh context; listing them as owners does not replace running them.
+
+The harness still executes `- [ ]` coding tasks via `loop.sh` / `wave.sh`. Specialist judges typically run via `role.sh` or a briefed subagent. They are not a second backlog and they do not skip the test gate.
 
 ## Tracer first
 
@@ -182,3 +198,5 @@ PROGRESS "For the human":
 - Visual review of margin layout at narrow widths
 - Confirm note tone on three real pieces
 ```
+
+T1 and T2 are sequential execute (Owner executor, implied). A specialist task on the same phase would add Owner / Input / Output / Escalate — for example a plan-checker before execute, still run in a fresh context via `role.sh` or `loop-plan-checker`, not as a substitute for those gates.

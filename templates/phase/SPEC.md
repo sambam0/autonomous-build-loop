@@ -26,6 +26,7 @@ Tasks with no dependency on each other and no overlapping Files can run in the s
 If the phase has UI-SPEC.md, UI tasks list the UI-xx checks they cover.
 The first task is a tracer: the thinnest end-to-end slice through every layer this phase touches.
 IDs must match PROGRESS.md.
+When the goal needs specialists (SKILL.md Orchestrate a goal), each non-coding or handoff task also lists Owner, Input, Output, and Escalate. Coding tasks imply Owner: executor.
 
 ### T1: <title> (tracer)
 Depends on: none

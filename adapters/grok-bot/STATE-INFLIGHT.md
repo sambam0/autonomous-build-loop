@@ -8,8 +8,8 @@
 | Phase decisions | Phase `CONTEXT.md` / `SPEC.md` | Not on inflight |
 | Task checklist / results | Phase `PROGRESS.md`, `results/` | Not on inflight |
 | Verification status | Phase `VERIFICATION.md` | Summarize on inflight only when Active |
-| Crew who-is-doing-what across goals | **`/home/box/orchestrator/inflight.md`** | Coordination only |
-| Goal breakdown / specialist assignment recipe | Skill **Orchestrate a goal** | Defers coding execute/verify to `.loop/` |
+| Crew who-is-doing-what across goals | **`/home/box/orchestrator/inflight.md`** | Adapter mirror only — not required for Claude Code / Codex / headless |
+| Goal breakdown / specialist assignment recipe | This skill: **Orchestrate a goal** (`SKILL.md` + `references/orchestrate.md`) | Defers coding execute/verify to `.loop/`; do not use a sibling orchestrate skill |
 
 ## Who updates what
 
