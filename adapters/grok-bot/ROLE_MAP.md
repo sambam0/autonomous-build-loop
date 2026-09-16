@@ -1,6 +1,6 @@
 # Role map — autonomous-build-loop ↔ Grok Bot crew
 
-Generic loop roles (left) map to crew specialists (right). Prefer the **minimum sequential** assignee. Do not fan out the same ask.
+This is the adapter view of SKILL.md **Orchestrate a goal**. Generic loop roles (left) map to crew specialists (right). Prefer the **minimum sequential** assignee. Do not fan out the same ask. Briefs use the template in `references/orchestrate.md`.
 
 | Loop role | Crew specialist | Dispatch surface (v1) | Notes |
 |-----------|-----------------|----------------------|--------|

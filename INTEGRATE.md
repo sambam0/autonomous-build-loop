@@ -1,6 +1,8 @@
 # Goal
 Fold "Orchestrate a goal" into the Autonomous Build Loop so phase/goal orchestration is *inside* the loop skill, not a separate parallel practice.
 
+**Status:** folded. See `CHANGELOG.md`, SKILL.md **Orchestrate a goal**, and `references/orchestrate.md`. `_incoming/orchestrate-a-goal/` was removed after absorption. This file is the original brief.
+
 # Sources (attached under uploads/)
 - `autonomous-build-loop/` — current loop skill (SoT mirror)
 - `orchestrate-a-goal/` — Grok Bot orchestrator skill to absorb
